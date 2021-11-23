@@ -12,6 +12,7 @@ const Employee = function (employee) {
     this.is_active = employee.is_active ? employee.is_active : 1;
     this.created_at = new Date();
     this.updated_at = new Date();
+
 };
 Employee.create = function (newEmp, result) {
     dbConnection.query("INSERT INTO employees set ?", newEmp, function (err, res) {
